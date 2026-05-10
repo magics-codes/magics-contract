@@ -35,7 +35,7 @@ abstract contract BaseTest is Test {
         // The vault has to know the router and vice versa — predict router
         // address using CREATE nonce. The three deploys land at +0 (vault),
         // +1 (registry), +2 (router) relative to the current nonce.
-        address routerPrediction = computeCreateAddress(address(this), vm.getNonce(address(this)) + 1);
+        address routerPrediction = computeCreateAddress(address(this), vm.getNonce(address(this)) + 2);
         vault = new SealVault(routerPrediction);
         registry = new AgentRegistry(address(vault));
         router = new MagicsRouter(address(vault), address(registry));
