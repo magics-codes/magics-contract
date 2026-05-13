@@ -21,17 +21,15 @@ library SealLib {
     }
 
     /// @dev EIP-712 typehash for the Cast action — what the seal signer is asked
-    ///      to sign before the router will route a call.
-    /// keccak256("Cast(bytes32 agentId,uint64 nonce,uint64 deadline,bytes32 dataHash)")
-    /// TODO: replace placeholder with compile-time keccak256 once typehash is locked in.
+    ///      to sign before the router will route a call. Computed at compile
+    ///      time; the compiler folds `keccak256(stringLiteral)` into a constant.
     bytes32 internal constant CAST_TYPEHASH =
-        0x9ea6b1a4c4f7c1f3a2c25f1d51b3b4d2e9e62f5cd2c1a4d8c4e8a3b8b7f2c2c1;
+        keccak256("Cast(bytes32 agentId,uint64 nonce,uint64 deadline,bytes32 dataHash)");
 
     /// @dev Type hash used to derive a stable on-chain id for a seal.
-    /// keccak256("Seal(address signer,address target,bytes4 selector,uint128 valueCap,uint128 dailyCap,uint64 expiry,uint64 createdAt,bytes32 scopeHash)")
-    /// TODO: same.
-    bytes32 internal constant SEAL_TYPEHASH =
-        0x1a3f4c5d6e7f8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c3d4e5f6a7b8c9d0e1f2a3b;
+    bytes32 internal constant SEAL_TYPEHASH = keccak256(
+        "Seal(address signer,address target,bytes4 selector,uint128 valueCap,uint128 dailyCap,uint64 expiry,uint64 createdAt,bytes32 scopeHash)"
+    );
 
     /// @notice Deterministic id for a seal. Two seals with the same parameters
     ///         and owner collide — which is fine, since they are interchangeable.
