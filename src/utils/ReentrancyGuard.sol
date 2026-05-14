@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.26;
 
+import {Errors} from "../libraries/Errors.sol";
+
 /// @title ReentrancyGuard
 /// @notice Transient-storage variant — cheap, and the slot is reset for free at
 ///         the end of every transaction.
@@ -11,11 +13,12 @@ abstract contract ReentrancyGuard {
 
     modifier nonReentrant() {
         bytes32 slot = _SLOT;
+        uint256 entered;
         assembly {
-            if tload(slot) {
-                mstore(0x00, 0x4d1a9b40) // bytes4(keccak256("CastReentrant()"))
-                revert(0x1c, 0x04)
-            }
+            entered := tload(slot)
+        }
+        if (entered != 0) revert Errors.CastReentrant();
+        assembly {
             tstore(slot, 1)
         }
         _;
