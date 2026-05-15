@@ -3,7 +3,6 @@ pragma solidity ^0.8.26;
 
 import {IStrategy} from "../interfaces/IStrategy.sol";
 import {IMagicsRouter} from "../interfaces/IMagicsRouter.sol";
-import {IERC20} from "../interfaces/IERC20.sol";
 import {SafeTransferLib} from "../utils/SafeTransferLib.sol";
 
 /// @notice Minimal ERC-4626-like yield vault interface used by the strategy.
@@ -122,8 +121,9 @@ contract PassiveYieldStrategy is IStrategy {
             sharesOf[agentId] = have - burnt;
         }
         received = yieldVault.redeem(burnt, address(this), address(this));
-        // Push assets back into the agent's router balance.
-        IERC20(asset).approve(address(router), received);
+        // Push assets back into the agent's router balance. safeApprove tolerates
+        // non-standard ERC20s that don't return a bool.
+        asset.safeApprove(address(router), received);
         router.push(asset, address(0), received);
         emit Harvested(agentId, burnt, received);
     }
