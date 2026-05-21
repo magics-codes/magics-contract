@@ -1,0 +1,9 @@
+{
+  "chainId": 8453,
+  "deployedAt": 1779290417,
+  "contracts": {
+    "SealVault": "0xF4a7591B10398B7b5dBB0FedBC52c7F7B7cFCacB",
+    "AgentRegistry": "0xc6967a98Ac4f0bf9B918B6c1e0E5B868d948E99f",
+    "MagicsRouter": "0xdD7b9C84aee89c6620011e6f34a0d3aAE45F032F"
+  }
+}
