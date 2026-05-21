@@ -32,4 +32,4 @@ high.
 ## Filing an issue
 
 If you think you've found a vulnerability, **do not** open a public issue.
-Email `security@magics.xyz` with a PoC and we'll triage within 48 hours.
+Email `security@magics.codes` with a PoC and we'll triage within 48 hours.
