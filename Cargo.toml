@@ -1,0 +1,32 @@
+[workspace]
+members = ["programs/*", "crates/*"]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["the magics contributors"]
+repository = "https://github.com/magics-codes/magics-contract-solana"
+
+[workspace.dependencies]
+anchor-lang = "0.31.1"
+anchor-spl = "0.31.1"
+magics-common = { path = "crates/magics-common" }
+
+# Programs export their account types + CPI helpers to siblings. Pulling a
+# program in as a library means turning its own entrypoint off.
+seal-vault = { path = "programs/seal-vault", default-features = false, features = ["cpi"] }
+agent-registry = { path = "programs/agent-registry", default-features = false, features = ["cpi"] }
+magics-router = { path = "programs/magics-router", default-features = false, features = ["cpi"] }
+mock-yield = { path = "programs/mock-yield", default-features = false, features = ["cpi"] }
+
+[profile.release]
+overflow-checks = true
+lto = "fat"
+codegen-units = 1
+
+[profile.release.build-override]
+opt-level = 3
+incremental = false
+codegen-units = 1
