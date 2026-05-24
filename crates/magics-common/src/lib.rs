@@ -6,5 +6,7 @@
 //! format — error codes, hashes, the signed message — is defined exactly once.
 
 pub mod error;
+pub mod seal;
 
 pub use error::MagicsError;
+pub use seal::Seal;
