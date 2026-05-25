@@ -6,6 +6,7 @@
 //! format — error codes, hashes, the signed message — is defined exactly once.
 
 pub mod domain;
+pub mod ed25519;
 pub mod error;
 pub mod seal;
 
