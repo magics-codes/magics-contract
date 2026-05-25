@@ -35,14 +35,21 @@ pub const SEAL_TAG: &[u8] = b"magics:seal:v1";
 
 impl Seal {
     /// Deterministic id for a seal under `owner`. Two seals with identical
-    /// parameters and owner collide — which is fine, they're interchangeable.
-    /// Mirrors `SealLib.idOf`: keccak over a typed tag, the owner, then the
-    /// canonically-encoded struct.
+    /// boundary parameters and owner collide — which is fine, they're
+    /// interchangeable. Hashes the boundary fields only: `created_at` is set
+    /// on-chain at mint, so folding it in would make the id — and therefore the
+    /// record's PDA — unpredictable to the client that has to name it.
     pub fn id(&self, owner: &Pubkey) -> [u8; 32] {
         keccak::hashv(&[
             SEAL_TAG,
             owner.as_ref(),
-            &self.try_to_vec().unwrap(),
+            self.signer.as_ref(),
+            self.target.as_ref(),
+            &self.selector,
+            &self.value_cap.to_le_bytes(),
+            &self.daily_cap.to_le_bytes(),
+            &self.expiry.to_le_bytes(),
+            &self.scope_hash,
         ])
         .0
     }
