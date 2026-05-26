@@ -1,0 +1,8 @@
+pub mod initialize;
+pub mod mint_seal;
+
+// Glob re-exports so the Accounts structs *and* the helper modules Anchor's
+// derive macros generate (`__client_accounts_*`, `__cpi_client_accounts_*`)
+// land at the crate root, where `#[program]` looks for them.
+pub use initialize::*;
+pub use mint_seal::*;

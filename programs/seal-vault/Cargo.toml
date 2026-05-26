@@ -1,0 +1,24 @@
+[package]
+name = "seal-vault"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "The boundary store — session-key seals for the magics protocol."
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "seal_vault"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = ["anchor-lang/idl-build", "magics-common/idl-build"]
+
+[dependencies]
+anchor-lang = { workspace = true, features = ["init-if-needed"] }
+magics-common = { workspace = true }

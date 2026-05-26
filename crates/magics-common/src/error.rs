@@ -19,6 +19,8 @@ pub enum MagicsError {
     // ── Seal lifecycle ──────────────────────────────────────────────────────
     #[msg("seal does not exist")]
     SealUnknown,
+    #[msg("supplied seal id does not match its parameters")]
+    SealIdMismatch,
     #[msg("seal has expired")]
     SealExpired,
     #[msg("seal is revoked")]
