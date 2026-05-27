@@ -25,6 +25,8 @@ pub enum MagicsError {
     SealExpired,
     #[msg("seal is revoked")]
     SealRevoked,
+    #[msg("revoke reason exceeds the maximum length")]
+    ReasonTooLong,
     #[msg("seal value or daily cap breached")]
     SealCapBreached,
     #[msg("seal does not permit this target")]

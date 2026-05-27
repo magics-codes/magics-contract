@@ -33,4 +33,14 @@ pub mod seal_vault {
     pub fn mint_seal(ctx: Context<MintSeal>, seal_id: [u8; 32], args: SealArgs) -> Result<()> {
         instructions::mint_seal::handler(ctx, seal_id, args)
     }
+
+    /// Revoke a single seal with a free-form reason.
+    pub fn revoke(ctx: Context<Revoke>, seal_id: [u8; 32], reason: String) -> Result<()> {
+        instructions::revoke::handler(ctx, seal_id, reason)
+    }
+
+    /// Revoke every live seal the caller owns from `remaining_accounts`.
+    pub fn revoke_all(ctx: Context<RevokeAll>) -> Result<()> {
+        instructions::revoke_all::handler(ctx)
+    }
 }
