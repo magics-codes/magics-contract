@@ -43,4 +43,17 @@ pub mod seal_vault {
     pub fn revoke_all(ctx: Context<RevokeAll>) -> Result<()> {
         instructions::revoke_all::handler(ctx)
     }
+
+    /// Verify a cast against a seal and consume one nonce. CPI-only, gated to
+    /// the bound router's cast authority.
+    pub fn verify_and_consume(
+        ctx: Context<VerifyAndConsume>,
+        seal_id: [u8; 32],
+        agent_id: [u8; 32],
+        deadline: i64,
+        data_hash: [u8; 32],
+        call_value: u64,
+    ) -> Result<()> {
+        instructions::verify::handler(ctx, seal_id, agent_id, deadline, data_hash, call_value)
+    }
 }

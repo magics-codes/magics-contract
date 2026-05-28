@@ -20,3 +20,10 @@ pub struct SealAllRevoked {
     pub owner: Pubkey,
     pub count: u64,
 }
+
+#[event]
+pub struct SealConsumed {
+    pub seal_id: [u8; 32],
+    pub value: u64,
+    pub nonce: u64,
+}
