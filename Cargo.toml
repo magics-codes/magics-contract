@@ -1,5 +1,5 @@
 [workspace]
-members = ["crates/magics-common", "programs/seal-vault"]
+members = ["crates/magics-common", "programs/seal-vault", "programs/agent-registry"]
 resolver = "2"
 
 [workspace.package]

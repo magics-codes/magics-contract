@@ -39,6 +39,8 @@ pub enum MagicsError {
     // ── Agent lifecycle ─────────────────────────────────────────────────────
     #[msg("agent does not exist")]
     AgentUnknown,
+    #[msg("supplied agent id does not match its parameters")]
+    AgentIdMismatch,
     #[msg("agent is not active")]
     AgentNotActive,
     #[msg("agent name is empty")]

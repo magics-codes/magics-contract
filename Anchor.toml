@@ -8,9 +8,11 @@ skip-lint = false
 # Program ids are filled in as each program lands — see `anchor keys list`.
 [programs.localnet]
 seal_vault = "Chydhx9FZ7dYwvNoRzbE8VMNHiQCJ8xWiydRuSoY9Q7W"
+agent_registry = "9qEVeDELh9wSRfKFcWohWkYjW2MfoKXepFTXeqN9TFsN"
 
 [programs.devnet]
 seal_vault = "Chydhx9FZ7dYwvNoRzbE8VMNHiQCJ8xWiydRuSoY9Q7W"
+agent_registry = "9qEVeDELh9wSRfKFcWohWkYjW2MfoKXepFTXeqN9TFsN"
 
 [registry]
 url = "https://api.apr.dev"
