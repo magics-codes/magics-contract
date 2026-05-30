@@ -31,4 +31,28 @@ pub mod agent_registry {
     ) -> Result<()> {
         instructions::summon::handler(ctx, agent_id, seal_id, strategy, name)
     }
+
+    /// Pause an agent.
+    pub fn pause(ctx: Context<UpdateAgent>, agent_id: [u8; 32], reason: String) -> Result<()> {
+        instructions::status::pause(ctx, agent_id, reason)
+    }
+
+    /// Resume a paused agent.
+    pub fn resume(ctx: Context<UpdateAgent>, agent_id: [u8; 32]) -> Result<()> {
+        instructions::status::resume(ctx, agent_id)
+    }
+
+    /// Halt an agent permanently.
+    pub fn halt(ctx: Context<UpdateAgent>, agent_id: [u8; 32], reason: String) -> Result<()> {
+        instructions::status::halt(ctx, agent_id, reason)
+    }
+
+    /// Rotate the seal bound to an agent.
+    pub fn rotate_seal(
+        ctx: Context<RotateSeal>,
+        agent_id: [u8; 32],
+        new_seal_id: [u8; 32],
+    ) -> Result<()> {
+        instructions::rotate_seal::handler(ctx, agent_id, new_seal_id)
+    }
 }
