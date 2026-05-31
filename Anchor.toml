@@ -9,10 +9,12 @@ skip-lint = false
 [programs.localnet]
 seal_vault = "Chydhx9FZ7dYwvNoRzbE8VMNHiQCJ8xWiydRuSoY9Q7W"
 agent_registry = "9qEVeDELh9wSRfKFcWohWkYjW2MfoKXepFTXeqN9TFsN"
+magics_router = "2c2FBbgCpB2VPhqMDsTX6VXJEhcnczSSTw5eR3DZrpUu"
 
 [programs.devnet]
 seal_vault = "Chydhx9FZ7dYwvNoRzbE8VMNHiQCJ8xWiydRuSoY9Q7W"
 agent_registry = "9qEVeDELh9wSRfKFcWohWkYjW2MfoKXepFTXeqN9TFsN"
+magics_router = "2c2FBbgCpB2VPhqMDsTX6VXJEhcnczSSTw5eR3DZrpUu"
 
 [registry]
 url = "https://api.apr.dev"

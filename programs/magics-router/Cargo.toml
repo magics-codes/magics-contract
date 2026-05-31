@@ -1,0 +1,33 @@
+[package]
+name = "magics-router"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "The hinge — per-agent token ledger and the single cast entry point."
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "magics_router"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = [
+    "anchor-lang/idl-build",
+    "anchor-spl/idl-build",
+    "magics-common/idl-build",
+    "seal-vault/idl-build",
+    "agent-registry/idl-build",
+]
+
+[dependencies]
+anchor-lang = { workspace = true, features = ["init-if-needed"] }
+anchor-spl = { workspace = true }
+magics-common = { workspace = true }
+seal-vault = { workspace = true }
+agent-registry = { workspace = true }
