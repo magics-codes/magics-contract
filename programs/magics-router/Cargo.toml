@@ -31,3 +31,4 @@ anchor-spl = { workspace = true }
 magics-common = { workspace = true }
 seal-vault = { workspace = true }
 agent-registry = { workspace = true }
+bytemuck = { version = "1", features = ["derive"] }

@@ -990,6 +990,7 @@ dependencies = [
  "agent-registry",
  "anchor-lang",
  "anchor-spl",
+ "bytemuck",
  "magics-common",
  "seal-vault",
 ]

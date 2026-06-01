@@ -34,4 +34,15 @@ pub mod magics_router {
     pub fn withdraw(ctx: Context<Withdraw>, agent_id: [u8; 32], amount: u64) -> Result<()> {
         instructions::withdraw::handler(ctx, agent_id, amount)
     }
+
+    /// The cast entry point. Verify the seal, then hand control to the strategy
+    /// under a transient budget.
+    pub fn cast<'info>(
+        ctx: Context<'_, '_, '_, 'info, CastAction<'info>>,
+        agent_id: [u8; 32],
+        deadline: i64,
+        data: Vec<u8>,
+    ) -> Result<()> {
+        instructions::cast::handler(ctx, agent_id, deadline, data)
+    }
 }
