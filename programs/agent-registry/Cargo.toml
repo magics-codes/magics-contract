@@ -22,4 +22,4 @@ idl-build = ["anchor-lang/idl-build", "magics-common/idl-build", "seal-vault/idl
 [dependencies]
 anchor-lang = { workspace = true, features = ["init-if-needed"] }
 magics-common = { workspace = true }
-seal-vault = { workspace = true }
+seal-vault = { path = "../seal-vault", features = ["cpi"] }

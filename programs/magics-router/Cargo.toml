@@ -29,6 +29,6 @@ idl-build = [
 anchor-lang = { workspace = true, features = ["init-if-needed"] }
 anchor-spl = { workspace = true }
 magics-common = { workspace = true }
-seal-vault = { workspace = true }
-agent-registry = { workspace = true }
+seal-vault = { path = "../seal-vault", features = ["cpi"] }
+agent-registry = { path = "../agent-registry", features = ["cpi"] }
 bytemuck = { version = "1", features = ["derive"] }

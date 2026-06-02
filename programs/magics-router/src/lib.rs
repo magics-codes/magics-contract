@@ -45,4 +45,14 @@ pub mod magics_router {
     ) -> Result<()> {
         instructions::cast::handler(ctx, agent_id, deadline, data)
     }
+
+    /// Strategy-facing: draw from the agent's balance. Only inside a live cast.
+    pub fn pull(ctx: Context<Budget>, agent_id: [u8; 32], amount: u64) -> Result<()> {
+        instructions::budget::pull(ctx, agent_id, amount)
+    }
+
+    /// Strategy-facing: return tokens to the agent's balance. Only inside a live cast.
+    pub fn push(ctx: Context<Budget>, agent_id: [u8; 32], amount: u64) -> Result<()> {
+        instructions::budget::push(ctx, agent_id, amount)
+    }
 }

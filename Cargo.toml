@@ -19,12 +19,11 @@ anchor-lang = "0.31.1"
 anchor-spl = "0.31.1"
 magics-common = { path = "crates/magics-common" }
 
-# Programs export their account types + CPI helpers to siblings. Pulling a
-# program in as a library means turning its own entrypoint off.
-seal-vault = { path = "programs/seal-vault", default-features = false, features = ["cpi"] }
-agent-registry = { path = "programs/agent-registry", default-features = false, features = ["cpi"] }
-magics-router = { path = "programs/magics-router", default-features = false, features = ["cpi"] }
-mock-yield = { path = "programs/mock-yield", default-features = false, features = ["cpi"] }
+# Programs export their account types + CPI helpers to siblings. Those deps are
+# declared explicitly in each program with `features = ["cpi"]` so the
+# dependency's own entrypoint (and its global allocator) are turned off — two
+# live allocators won't link. Note: do NOT add `default-features = false` on a
+# path dep that is also a workspace member; it keeps the entrypoint on.
 
 [profile.release]
 overflow-checks = true
