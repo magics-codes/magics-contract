@@ -4,6 +4,7 @@ members = [
     "programs/seal-vault",
     "programs/agent-registry",
     "programs/magics-router",
+    "programs/mock-yield",
 ]
 resolver = "2"
 
