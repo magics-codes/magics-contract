@@ -1127,6 +1127,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "passive-yield"
+version = "0.1.0"
+dependencies = [
+ "anchor-lang",
+ "anchor-spl",
+ "magics-router",
+ "mock-yield",
+]
+
+[[package]]
 name = "pbkdf2"
 version = "0.11.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"

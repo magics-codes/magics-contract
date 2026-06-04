@@ -1,0 +1,31 @@
+[package]
+name = "passive-yield"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+description = "Reference strategy — compound idle deposits into a yield vault, harvest back."
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "passive_yield"
+
+[features]
+default = []
+cpi = ["no-entrypoint"]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+idl-build = [
+    "anchor-lang/idl-build",
+    "anchor-spl/idl-build",
+    "magics-router/idl-build",
+    "mock-yield/idl-build",
+]
+
+[dependencies]
+anchor-lang = { workspace = true }
+anchor-spl = { workspace = true }
+magics-router = { path = "../magics-router", features = ["cpi"] }
+mock-yield = { path = "../mock-yield", features = ["cpi"] }
