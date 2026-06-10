@@ -1,0 +1,11 @@
+{
+  "cluster": "devnet",
+  "recordedAt": 1781018417,
+  "programs": {
+    "sealVault": "Chydhx9FZ7dYwvNoRzbE8VMNHiQCJ8xWiydRuSoY9Q7W",
+    "agentRegistry": "9qEVeDELh9wSRfKFcWohWkYjW2MfoKXepFTXeqN9TFsN",
+    "magicsRouter": "2c2FBbgCpB2VPhqMDsTX6VXJEhcnczSSTw5eR3DZrpUu",
+    "passiveYield": "HPEdHcgxJVQX2VRcYM2fMXn963sXXmwhuxC9SwWLQD6n",
+    "mockYield": "4339iYHiD6y52hcCWrUdN7tjH3rSEwnmyKdQZfFpngWC"
+  }
+}
