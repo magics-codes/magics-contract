@@ -8,6 +8,8 @@
 Session keys, an agent registry, a router, and a reference strategy — all in
 Anchor 0.31, all under MIT.
 
+CA : CNyhFMNivHHBwVLXG8wsfqUtLr1XpoQvpVqTEaoFpump
+
 [![Anchor 0.31](https://img.shields.io/badge/anchor-0.31.1-512da8.svg?style=flat-square)](./Anchor.toml)
 [![Solana](https://img.shields.io/badge/solana-3.x-14f195.svg?style=flat-square)](https://solana.com)
 [![Tests](https://img.shields.io/badge/tests-anchor-success.svg?style=flat-square)](./tests)
