@@ -150,6 +150,15 @@ budget the router exposes, because the budget API is gated on a transient PDA th
 router controls and a program signature only the strategy can produce. The kill
 switch (`revoke_all`) is one transaction from the owner's root key.
 
+## Deployments
+
+| Cluster | Manifest                                       |
+| :------ | :--------------------------------------------- |
+| devnet  | [`deployments/devnet.json`](./deployments/devnet.json) |
+
+Program ids are the deploy keypairs' public keys, so they're identical on every
+cluster — the manifest just records where they were last pushed.
+
 ## Audit status
 
 This is the **v0.1.0 reference port**. It is not audited. Use it on devnet, read
