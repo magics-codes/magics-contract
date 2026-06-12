@@ -5,20 +5,19 @@ anchor_version = "0.31.1"
 resolution = true
 skip-lint = false
 
-# Program ids are filled in as each program lands — see `anchor keys list`.
-[programs.localnet]
-seal_vault = "Chydhx9FZ7dYwvNoRzbE8VMNHiQCJ8xWiydRuSoY9Q7W"
-agent_registry = "9qEVeDELh9wSRfKFcWohWkYjW2MfoKXepFTXeqN9TFsN"
-magics_router = "2c2FBbgCpB2VPhqMDsTX6VXJEhcnczSSTw5eR3DZrpUu"
-mock_yield = "4339iYHiD6y52hcCWrUdN7tjH3rSEwnmyKdQZfFpngWC"
-passive_yield = "HPEdHcgxJVQX2VRcYM2fMXn963sXXmwhuxC9SwWLQD6n"
-
 [programs.devnet]
-seal_vault = "Chydhx9FZ7dYwvNoRzbE8VMNHiQCJ8xWiydRuSoY9Q7W"
+agent_registry = "31SxC6ivUkHdcUnvR23wqGyJgdmiHWR7UWZuWW42cYCR"
+magics_router = "EyZ4qCWwXZwh9nWnZo1nvNoThsY96yprV2APWEEChCBy"
+mock_yield = "Cj2KQGwVxDYgzXk4q8XMNQBCsCNxo3dRkWtG6eng66gN"
+passive_yield = "Gd39nuaCTLMv5J6Q2jA8khmtEKwvsdBafTWK8twLvR5q"
+seal_vault = "Hs1WNEErp5rqhy8JvofPzL8UYHFaWj9gRDjofhNqQvhZ"
+
+[programs.localnet]
 agent_registry = "9qEVeDELh9wSRfKFcWohWkYjW2MfoKXepFTXeqN9TFsN"
 magics_router = "2c2FBbgCpB2VPhqMDsTX6VXJEhcnczSSTw5eR3DZrpUu"
 mock_yield = "4339iYHiD6y52hcCWrUdN7tjH3rSEwnmyKdQZfFpngWC"
 passive_yield = "HPEdHcgxJVQX2VRcYM2fMXn963sXXmwhuxC9SwWLQD6n"
+seal_vault = "Chydhx9FZ7dYwvNoRzbE8VMNHiQCJ8xWiydRuSoY9Q7W"
 
 [registry]
 url = "https://api.apr.dev"

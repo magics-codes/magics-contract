@@ -18,7 +18,7 @@ pub mod state;
 
 use instructions::*;
 
-declare_id!("Chydhx9FZ7dYwvNoRzbE8VMNHiQCJ8xWiydRuSoY9Q7W");
+declare_id!("Hs1WNEErp5rqhy8JvofPzL8UYHFaWj9gRDjofhNqQvhZ");
 
 #[program]
 pub mod seal_vault {

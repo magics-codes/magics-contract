@@ -12,8 +12,9 @@ dist/
 yarn-error.log
 npm-debug.log*
 
-# Keypairs — deploy keys never go in git
+# Keypairs and wallets — deploy keys never go in git
 **/*-keypair.json
+.secrets/
 
 # Dotenv
 .env

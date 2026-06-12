@@ -2,10 +2,10 @@
   "cluster": "devnet",
   "recordedAt": 1781018417,
   "programs": {
-    "sealVault": "Chydhx9FZ7dYwvNoRzbE8VMNHiQCJ8xWiydRuSoY9Q7W",
-    "agentRegistry": "9qEVeDELh9wSRfKFcWohWkYjW2MfoKXepFTXeqN9TFsN",
-    "magicsRouter": "2c2FBbgCpB2VPhqMDsTX6VXJEhcnczSSTw5eR3DZrpUu",
-    "passiveYield": "HPEdHcgxJVQX2VRcYM2fMXn963sXXmwhuxC9SwWLQD6n",
-    "mockYield": "4339iYHiD6y52hcCWrUdN7tjH3rSEwnmyKdQZfFpngWC"
+    "sealVault": "Hs1WNEErp5rqhy8JvofPzL8UYHFaWj9gRDjofhNqQvhZ",
+    "agentRegistry": "31SxC6ivUkHdcUnvR23wqGyJgdmiHWR7UWZuWW42cYCR",
+    "magicsRouter": "EyZ4qCWwXZwh9nWnZo1nvNoThsY96yprV2APWEEChCBy",
+    "passiveYield": "Gd39nuaCTLMv5J6Q2jA8khmtEKwvsdBafTWK8twLvR5q",
+    "mockYield": "Cj2KQGwVxDYgzXk4q8XMNQBCsCNxo3dRkWtG6eng66gN"
   }
 }

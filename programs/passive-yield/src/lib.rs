@@ -16,7 +16,7 @@
 use anchor_lang::prelude::*;
 use anchor_spl::token::{Mint, Token, TokenAccount};
 
-declare_id!("HPEdHcgxJVQX2VRcYM2fMXn963sXXmwhuxC9SwWLQD6n");
+declare_id!("Gd39nuaCTLMv5J6Q2jA8khmtEKwvsdBafTWK8twLvR5q");
 
 /// Must match the router's `STRATEGY_AUTH_SEED`.
 const STRATEGY_SEED: &[u8] = b"strategy";

@@ -19,7 +19,7 @@ pub mod state;
 
 use instructions::*;
 
-declare_id!("2c2FBbgCpB2VPhqMDsTX6VXJEhcnczSSTw5eR3DZrpUu");
+declare_id!("EyZ4qCWwXZwh9nWnZo1nvNoThsY96yprV2APWEEChCBy");
 
 #[program]
 pub mod magics_router {

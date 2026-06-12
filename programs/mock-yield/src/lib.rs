@@ -9,7 +9,7 @@
 use anchor_lang::prelude::*;
 use anchor_spl::token::{self, Burn, Mint, MintTo, Token, TokenAccount, Transfer};
 
-declare_id!("4339iYHiD6y52hcCWrUdN7tjH3rSEwnmyKdQZfFpngWC");
+declare_id!("Cj2KQGwVxDYgzXk4q8XMNQBCsCNxo3dRkWtG6eng66gN");
 
 const VAULT_SEED: &[u8] = b"yvault";
 const AUTH_SEED: &[u8] = b"yauth";
