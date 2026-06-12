@@ -1,0 +1,11 @@
+{
+  "cluster": "mainnet-beta",
+  "deployedAt": 1781107200,
+  "upgradeAuthority": "5ijsLcVFX2zhazAetJroV1U7cB4BQW8Zy87Raoxq3Nu2",
+  "programs": {
+    "sealVault": "Hs1WNEErp5rqhy8JvofPzL8UYHFaWj9gRDjofhNqQvhZ",
+    "agentRegistry": "31SxC6ivUkHdcUnvR23wqGyJgdmiHWR7UWZuWW42cYCR",
+    "magicsRouter": "EyZ4qCWwXZwh9nWnZo1nvNoThsY96yprV2APWEEChCBy"
+  },
+  "config": "Ggs8y3LGn35CfZb9GgGY7C6v4dHTP1T7x6YmUTbQFPYS"
+}

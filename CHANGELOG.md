@@ -6,7 +6,8 @@ change is a major bump.
 
 ## [0.1.0] — 2026-06-10
 
-The first cut of the Solana port. Verified on devnet.
+The first cut of the Solana port. The three core programs are deployed on
+Solana mainnet — see [`deployments/mainnet.json`](./deployments/mainnet.json).
 
 ### Added
 - `seal-vault` — session-key boundary store. Seal records as PDAs, Ed25519 cast

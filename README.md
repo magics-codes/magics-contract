@@ -154,9 +154,10 @@ switch (`revoke_all`) is one transaction from the owner's root key.
 
 ## Deployments
 
-| Cluster | Manifest                                       |
-| :------ | :--------------------------------------------- |
-| devnet  | [`deployments/devnet.json`](./deployments/devnet.json) |
+| Cluster      | Manifest                                       |
+| :----------- | :--------------------------------------------- |
+| mainnet-beta | [`deployments/mainnet.json`](./deployments/mainnet.json) |
+| devnet       | [`deployments/devnet.json`](./deployments/devnet.json) |
 
 Program ids are the deploy keypairs' public keys, so they're identical on every
 cluster — the manifest just records where they were last pushed.
